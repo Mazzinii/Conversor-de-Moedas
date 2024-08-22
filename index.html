@@ -39,15 +39,15 @@
     <main>
       <section>
         <div class="container">
-          <h1 class="titulo">Cotação da Moeda</h1>
+          <h1 class="titulo">Taxa de Câmbio</h1>
           <div class="form">
             <div class="valor">
-              <label for="valor">Insira o valor da moeda:</label>
-              <br />
-              <input type="number" name="valor" id="valor" />
+              <label for="valor">Insira o valor</label>
+
+              <div><input type="number" name="valor" id="valor" /></div>
             </div>
             <div>
-              <legend>Selecione a Moeda desejada:</legend>
+              <legend>Selecione a Moeda de origem</legend>
               <div class="containerInputs">
                 <div>
                   <input type="radio" name="radio" id="Dolar" required />
@@ -64,7 +64,7 @@
               </div>
             </div>
             <div>
-              <legend>Selecione a Segunda Moeda:</legend>
+              <legend>Selecione a Moeda de destino</legend>
               <div class="containerInputs">
                 <div>
                   <input type="radio" name="radio1" id="Dolar" required />
@@ -80,7 +80,7 @@
                 </div>
               </div>
             </div>
-            <div class="res"><h3>Resultado:</h3></div>
+            <div class="res"></div>
             <div class="button">
               <button onclick="buttonCotaçao()"><h3>Fazer Cotação</h3></button>
             </div>

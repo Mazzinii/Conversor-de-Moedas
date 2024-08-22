@@ -54,10 +54,14 @@ section {
   gap: 2rem;
 }
 .valor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   input {
     border-radius: 0.5rem;
     margin-top: 1rem;
-    padding: 0.4rem;
+    padding: 0.6rem;
     border: none;
   }
 }
@@ -71,23 +75,22 @@ label,
 legend {
   margin-bottom: 0.5rem;
 }
+.res {
+  margin: 1rem 0 1rem 0;
+}
 h3 {
   color: white;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
 .button {
   display: flex;
   justify-content: center;
 
-  button {
-    padding: 1.5rem;
+  & button {
+    padding: 1.2rem;
     background-color: #000f2b;
     border: none;
-    border-radius: 0.5rem;
-
-    h3 {
-      color: #b8cdea;
-    }
+    border-radius: 1rem;
   }
   button:hover {
     transition: 0.3s;
@@ -95,8 +98,16 @@ h3 {
     cursor: pointer;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 3rem 2rem;
+  }
+  .valor {
+    input {
+      text-align: center;
+      font-size: 1.9rem;
+      width: 200px;
+    }
   }
 }
