@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="script.js" defer></script>
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1 class="titulo">Cotação da Moeda</h1>
+          <div class="form">
+            <div class="valor">
+              <label for="valor">Insira o valor da moeda:</label>
+              <br />
+              <input type="number" name="valor" id="valor" />
+            </div>
+            <div>
+              <legend>Selecione a Moeda desejada:</legend>
+              <div class="containerInputs">
+                <div>
+                  <input type="radio" name="radio" id="Dolar" required />
+                  <label for="Masculino"> Dolar</label>
+                </div>
+                <div>
+                  <input type="radio" name="radio" id="Peso" required />
+                  <label for="Masculino"> Peso</label>
+                </div>
+                <div>
+                  <input type="radio" name="radio" id="Real" required />
+                  <label for="Masculino"> Real</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <legend>Selecione a Segunda Moeda:</legend>
+              <div class="containerInputs">
+                <div>
+                  <input type="radio" name="radio1" id="Dolar" required />
+                  <label for="Masculino"> Dolar</label>
+                </div>
+                <div>
+                  <input type="radio" name="radio1" id="Peso" required />
+                  <label for="Masculino"> Peso</label>
+                </div>
+                <div>
+                  <input type="radio" name="radio1" id="Real" required />
+                  <label for="Masculino"> Real</label>
+                </div>
+              </div>
+            </div>
+            <div class="res"><h3>Resultado:</h3></div>
+            <div class="button">
+              <button onclick="buttonCotaçao()"><h3>Fazer Cotação</h3></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
