@@ -3,11 +3,15 @@ function buttonCotaçao() {
   const valor1 = document.getElementsByName("radio");
   const valor2 = document.getElementsByName("radio1");
   const valorMoeda = document.querySelector(".res");
+  var erroValor = document.querySelector(".erroInput");
+  var erroOrigem = document.querySelector(".erroInputOrigem");
+  var erroDestino = document.querySelector(".erroInputDestino");
   var dinheiro = document.querySelector("#valor").value;
 
   if (dinheiro == "") {
-    alert("Por favor, preencha o campo com o valor a ser convertido");
+    erroValor.innerHTML = "<p>Selecione um valor para moeda origem</p>";
   } else {
+    erroValor.innerHTML = "";
     //transformando str em number
     dinheiro = Number(dinheiro);
 
@@ -23,7 +27,12 @@ function buttonCotaçao() {
     } else if (valor1[2].checked) {
       moeda1 = "BRL";
     } else {
-      alert("Selecione uma moeda para a primeira moeda");
+      erroOrigem.innerHTML = "<p>Selecione um valor para moeda origem</p>";
+    }
+
+    // verificando se a moeda é difente de vazio e tirando a menssagem de erro
+    if (moeda1 !== "") {
+      erroOrigem.innerHTML = "";
     }
 
     //pegando valor do radio2
@@ -34,7 +43,12 @@ function buttonCotaçao() {
     } else if (valor2[2].checked) {
       moeda2 = "BRL";
     } else {
-      alert("selecione a segunda moeda");
+      erroDestino.innerHTML = "<p>Selecione um valor para moeda destino</p>";
+    }
+
+    // verificando se a moeda é difente de vazio e tirando a menssagem de erro
+    if (moeda2 !== "") {
+      erroDestino.innerHTML = "";
     }
 
     //definindo a URL

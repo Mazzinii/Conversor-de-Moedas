@@ -51,8 +51,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
+/* First Input (valor) */
+
 .valor {
   display: flex;
   flex-direction: column;
@@ -71,6 +73,20 @@ section {
   align-items: flex-start;
   gap: 1rem;
 }
+
+/* ErroInputs */
+.erroInput,
+.erroInputOrigem,
+.erroInputDestino {
+  text-align: center;
+  font-size: 1.2rem;
+
+  & p {
+    color: red;
+    margin-bottom: 0;
+  }
+}
+
 label,
 legend {
   margin-bottom: 0.5rem;
